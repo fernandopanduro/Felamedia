@@ -1,0 +1,115 @@
+:root {
+    /* Variables */
+    --ColorPrincipal: ;
+    --ColorSecundario: ;
+    --ColorClaro: #d1d1d1;
+
+    --MargenL: 3rem;
+    --MargenM: 2rem;
+    --MargenS: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--ColorClaro);
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 90%;
+    width: 75rem;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menu Hamburguesa */
+
+.bars {
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    border: none;
+}
+
+.bars span {
+    width: 100%;
+    height: .1875rem;
+    border-radius: .1875rem;
+    background-color: var(--ColorClaro);
+    transform-origin: 0px 100%;
+    transition: all .3s;
+}
+
+.bars__lineBar1--active {
+    transform: rotate(45deg) translate(-0.125rem, .0625rem);
+}
+
+.bars__lineBar2--active {
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.bars__lineBar3--active {
+    transform: rotate(-45deg) translate(-0.0625rem, 0);
+}
+
+/* Menu Responsive */
+
+.responsiveMenu {
+    position: absolute;
+    top: 4rem;
+    right: 0%;
+    width: 1px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s;
+}
+
+.responsiveMenu--active {
+    display: flex;
+    width: 60%;
+    background-color: red;
+}
