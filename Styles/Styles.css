@@ -1,6 +1,6 @@
 :root {
     /* Variables */
-    --ColorPrincipal: ;
+    --ColorPrincipal: rgb(255, 211, 17);
     --ColorSecundario: ;
     --ColorClaro: #fffdfd;
 
@@ -17,7 +17,7 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: var(--ColorClaro);
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth; 
 }
 
 body {
@@ -47,6 +47,12 @@ li {
 .container {
     max-width: 90%;
     width: 75rem;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    border-radius: .25rem;
 }
 
 /* Header */
@@ -189,12 +195,6 @@ li {
     gap: var(--MargenS);
 }
 
-.img {
-    width: 100%;
-    height: auto;
-    border-radius: .25rem;
-}
-
 /* Products */
 
 .products {
@@ -250,5 +250,81 @@ li {
         position: absolute;
         bottom: 0;
         width: 90%;
+    }
+}
+
+/* About */
+
+.about {
+    width: 100%;
+    height: 28.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Assets/Img/paneles-solares-2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    filter: saturate(110%);
+}
+
+.about__img {
+    width: 100%;
+}
+
+.about__description {
+    display: flex;
+    gap: 9rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .about__description {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 468px) {
+    .about__description {
+        flex-direction: column;
+    }
+}
+
+.description__subtitle {
+    font-size: 1.5rem;
+}
+
+.description__number {
+    color: var(--ColorPrincipal);
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+@media (max-width: 720px) {
+    .description__subtitle {
+        font-size: 1rem;
+    }
+    .description__number {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .description__subtitle {
+        font-size: 1rem;
+    }
+    .description__number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 468px) {
+    .description__subtitle {
+        font-size: 1rem;
+    }
+    .description__number {
+        font-size: 3rem;
     }
 }
