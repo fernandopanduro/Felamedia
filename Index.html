@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="./Styles/Normalize.css">
     <link rel="stylesheet" href="./Styles/Styles.css">
 
-    <script src="https://kit.fontawesome.com/393fb51165.js" crossorigin="anonymous"></script>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,100&display=swap" rel="stylesheet">
-
-    <script async src="./JS/Script.js"></script>
+    
+    <script defer src="https://kit.fontawesome.com/393fb51165.js" crossorigin="anonymous"></script>
+    <script defer src="./JS/Script.js"></script>
 </head>
 <body>
     
@@ -42,8 +41,8 @@
             <li><a href="#home"  rel="noopener noreferrer">Home</a></li>
             <li><a href="#products"  rel="noopener noreferrer">Products</a></li>
             <li><a href="#about"  rel="noopener noreferrer">About Us</a></li>
-            <li><a href="#quote"  rel="noopener noreferrer">Quote</a></li>
-            <li><a href="#review"  rel="noopener noreferrer">Review</a></li>
+            <li><a href="#contact"  rel="noopener noreferrer">Contact</a></li>
+            <li><a href="#quote"  rel="noopener noreferrer">Quote</a></li>\
         </ul>
     </div>
 
@@ -54,15 +53,28 @@
             <picture class="cover__picture">
                 <source srcset="./Assets/Img/paneles-solares-6.avif" type="image/avif">
                 <source srcset="./Assets/Img/paneles-solares-6.webp" type="image/webp">
-                <img class="cover__img" src="./Assets/Img/paneles-solares-6.jpg" alt="Paneles Solares">
+                <img class="cover__img" loading='lazy' src="./Assets/Img/paneles-solares-6.jpg" alt="Paneles Solares">
             </picture>
         </div>
     </section>
 
     <main class="main">
 
-        <section aria-colcount="products" class="container">
-            <h3>Products</h3>
+        <section id="beneficios" class="container beneficios">
+            <div class="beneficios__description">
+                <h3 class="subtitle">Beneficios</h3>
+                <ul class="list">
+                    <li class="list__item">Amigable con el ambiente. Propiamente la energía del sol no causa contaminación.</li>
+                    <li class="list__item">Es renovable.</li>
+                    <li class="list__item">Reduce los costos de electricidad. Con los nuevos medidores bidireccionales es posible que si un hogar produce más energía de la que consume pueda regresar a la red eléctrica de CFE con lo que el usuario obtiene crédito a favor.</li>
+                    <li class="list__item">De bajo mantenimiento. Apenas se necesita limpieza de los paneles, los cuales llegan a tener hasta 20 años de garantía.</li>
+                </ul>
+            </div>
+            <picture class='picture'>
+                <source src='./Assets/Img/paneles-solares-1.avif' type='image/avif'/>
+                <source src='./Assets/Img/paneles-solares-1.webp' type='image/webp'/>
+                <img class='img' loading='lazy' width='200' height='300' src='./Assets/Img/paneles-solares-1.jpg' alt='Paneles Solares' />
+            </picture>
         </section>
 
     </main>

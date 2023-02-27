@@ -153,8 +153,44 @@ li {
 
 .main {
     width: 100%;
+    padding: var(--MargenL) 0;
     display: flex;
+    gap: var(--MargenL);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Beneficios */
+
+.beneficios,
+.beneficios__description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--MargenS);
+    text-align: center;
+}
+
+@media (min-width: 720px) {
+    .beneficios {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .beneficios__description {
+        width: 50%;
+        text-align: justify;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--MargenS);
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    border-radius: .25rem;
 }
