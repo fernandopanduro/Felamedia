@@ -1,0 +1,26 @@
+{
+  "name": "felamedia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandopanduro/Felamedia.git"
+  },
+  "author": "Fernando Panduro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandopanduro/Felamedia/issues"
+  },
+  "homepage": "https://github.com/fernandopanduro/Felamedia#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-webp": "^4.0.1"
+  }
+}
