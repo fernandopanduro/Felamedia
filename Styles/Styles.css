@@ -2,7 +2,7 @@
     /* Variables */
     --ColorPrincipal: ;
     --ColorSecundario: ;
-    --ColorClaro: #d1d1d1;
+    --ColorClaro: #fffdfd;
 
     --MargenL: 3rem;
     --MargenM: 2rem;
@@ -33,6 +33,7 @@ h2,
 h3,
 h4 {
     margin: 0;
+    text-align: center;
 }
 
 a {
@@ -58,6 +59,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
 }
 
 /* Menu Hamburguesa */
@@ -106,10 +108,53 @@ li {
     flex-direction: column;
     align-items: center;
     transition: all .3s;
+    z-index: 10;
 }
 
 .responsiveMenu--active {
     display: flex;
     width: 60%;
     background-color: red;
+}
+
+/* Home */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.home__title {
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    letter-spacing: 5px;
+    font-size: 3.5rem;
+    z-index: 5;
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.cover__img {
+    object-position: left;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Main */
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
