@@ -26,7 +26,7 @@
 
         <a title="Energy" href="#"><h1>Energy</h1></a>
 
-        <button class="bars">
+        <button name="Menu" title="Menu" class="bars">
             <span class="bars__lineBar1"></span>
             <span class="bars__lineBar2"></span>
             <span class="bars__lineBar3"></span>
@@ -71,10 +71,63 @@
                 </ul>
             </div>
             <picture class='picture'>
-                <source src='./Assets/Img/paneles-solares-1.avif' type='image/avif'/>
-                <source src='./Assets/Img/paneles-solares-1.webp' type='image/webp'/>
+                <source srcset='./Assets/Img/paneles-solares-1.avif' type='image/avif'/>
+                <source srcset='./Assets/Img/paneles-solares-1.webp' type='image/webp'/>
                 <img class='img' loading='lazy' width='200' height='300' src='./Assets/Img/paneles-solares-1.jpg' alt='Paneles Solares' />
             </picture>
+        </section>
+
+        <section id="products" class="products container">
+            <h3>Products</h3>
+
+            <div class="cards">
+                <div class="card">
+                    <picture class='picture'>
+                        <source srcset='./Assets/Img/panel-solar-fotovoltaico.avif' type='image/avif'/>
+                        <source srcset='./Assets/Img/panel-solar-fotovoltaico.webp' type='image/webp'/>
+                        <img class='img card__img' loading='lazy' width='200' height='300' src='./Assets/Img/panel-solar-fotovoltaico.jpg' alt='Panel Solar Fotovoltaico' />
+                    </picture>
+                    <h4>Panel Solar Fotovoltaico</h4>
+                    <ul class="list">
+                        <li class="list__item">Células solares de película fina</li>
+                        <li class="list__item">Célula solar de silicio amorfo</li>
+                        <li class="list__item">Célula solar biohíbrida</li>
+                        <li class="list__item">Célula fotovoltaica concentrada</li>
+                    </ul>
+                    <a href="#contact" title="Contact" class="btnContact">Contact</a>
+                </div>
+                <div class="card">
+                    <picture class='picture'>
+                        <source srcset='./Assets/Img/colector-solar.avif' type='image/avif'/>
+                        <source srcset='./Assets/Img/colector-solar.webp' type='image/webp'/>
+                        <img class='img card__img' loading='lazy' width='200' height='300' src='./Assets/Img/colector-solar.jpg' alt='Colectores solares' />
+                    </picture>
+                    <h4>Colectores Solares</h4>
+                    <ul class="list">
+                        <li class="list__item">Paneles solares térmicos</li>
+                        <li class="list__item">La energía solar puede emplearse para climatizar</li>
+                        <li class="list__item">Energía que se recupera del sol se convierta, no ya en electricidad, sino en calor</li>
+                        <li class="list__item">Logran llegar a los 90 grados</li>
+                    </ul>
+                    <a href="#contact" title="Contact" class="btnContact">Contact</a>
+                </div>
+                <div class="card">
+                    <picture class='picture'>
+                        <source srcset='./Assets/Img/panel-solar-híbrido.avif' type='image/avif'/>
+                        <source srcset='./Assets/Img/panel-solar-híbrido.webp' type='image/webp'/>
+                        <img class='img card__img' loading='lazy' width='200' height='300' src='./Assets/Img/panel-solar-híbrido.jpg' alt='Panel Solar Híbrido' />
+                    </picture>
+                    <h4>Panel Solar Híbrido</h4>
+                    <ul class="list">
+                        <li class="list__item">Cambinacion de colectores y los paneles solares</li>
+                        <li class="list__item">Multiples usos</li>
+                        <li class="list__item">Produce electricidad y tambien calor</li>
+                        <li class="list__item">Recupera la inversion poco tiempo</li>
+                    </ul>
+                    <a href="#contact" title="Contact" class="btnContact">Contact</a>
+                </div>
+            </div>
+
         </section>
 
     </main>

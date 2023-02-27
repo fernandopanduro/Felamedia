@@ -49,4 +49,4 @@ function versionAvif(done) {
 exports.imageMin    = imageMin;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev         = parallel(versionAvif, versionWebp);
+exports.dev         = parallel(versionAvif, versionWebp, imageMin);

@@ -17,6 +17,7 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: var(--ColorClaro);
+    scroll-behavior: smooth;    
 }
 
 body {
@@ -25,7 +26,6 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: black;
-    scroll-behavior: smooth;
 }
 
 h1,
@@ -193,4 +193,62 @@ li {
     width: 100%;
     height: auto;
     border-radius: .25rem;
+}
+
+/* Products */
+
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: var(--MargenM);
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: var(--MargenM);
+}
+
+.card {
+    position: relative;
+    width: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--MargenS);
+    text-align: center;
+    background-color: rgba(255, 255, 255, .1);
+    padding: var(--MargenS);
+}
+
+@media (min-width: 700px) {
+    .card {
+        height: 31.25rem;
+    }
+}
+
+.card__img {
+    width: 100%;
+    object-fit: fill;
+    height: 12.5rem;
+}
+
+.btnContact {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid var(--ColorClaro);
+    border-radius: 2px;
+}
+
+@media (min-width: 700px) {
+    .btnContact {
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+    }
 }
