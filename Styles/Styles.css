@@ -265,6 +265,8 @@ li {
     background-image: url('../Assets/Img/paneles-solares-2.jpg');
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: saturate(110%);
 }
 
@@ -327,4 +329,96 @@ li {
     .description__number {
         font-size: 3rem;
     }
+}
+
+
+/* Form */
+.contact-container,
+.contact {
+    width: 100%;
+    padding: var(--MargenM) 0;
+    background-color: var(--ColorPrincipal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__img {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    width: 100%;
+}
+
+@media (min-width: 720px) {
+    .contact-container {
+        flex-direction: row;
+    }
+    .form {
+        width: 50%;
+    }
+    .contact__picture {
+        width: 50%;
+    }
+}
+
+
+
+.fields {
+    display: flex;  
+    flex-direction: column;
+    gap: var(--MargenS);
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    width: 100%;
+}
+
+.label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+
+.input {
+    background-color: #fdfdfd;
+    padding: var(--MargenS);
+    border-radius: .3125rem;
+    border: none;
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.input .success {
+    border: 1px solid #09c372;
+}
+.input .error {
+    border: 1px solid #ff3860;
+}
+
+.btn__form {
+    padding: var(--MargenS);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: black;
+    border-radius: .3125rem;
+    border: none;
+    transition: .3s;
+}
+
+.btn__form:hover {
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.contact__paragrath {
+    text-align: center;
 }

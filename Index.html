@@ -129,7 +129,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
 
             <div class="about__description">
                 <div>
@@ -147,7 +147,51 @@
             </div>
         </section>
 
+        <section id="contact" class="contact">
+            <h3 class="subtitle">Contact</h3>
+            <p class="container contact__paragrath">Estas interesado en adquirir nuestros productos solares? Envianos tu informacion através del formulario de contacto para hacerte llegar una cotizacion</p>
+
+            <div class="contact-container container">
+                <picture class='contact__picture'>
+                    <source srcset='./Assets/Img/mail-dynamic-clay.avif' type='image/avif'/>
+                    <source srcset='./Assets/Img/mail-dynamic-clay.webp' type='image/webp'/>
+                    <img class='contact__img' loading='lazy' width='200' height='300' src='./Assets/Img/mail-dynamic-clay.png' alt='Mail' />
+                </picture>
+    
+                <form class="form" action=/" method="post">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label class="label" for="full-name">Full Name:</label>
+                            <input required class="input" autocomplete="name" type="text" name="full-name" id="full-name" placeholder="Enter Full Name">
+                            <div class="error"></div>
+                        </div>  
+                        <div class="input-field">
+                            <label class="label" for="email">Email:</label>
+                            <input required class="input" autocomplete="email" type="email" name="email" id="email" placeholder="Enter Email">
+                        </div>
+                        <div class="input-field">
+                            <label class="label" for="phone">Phone:</label>
+                            <input required class="input" type="number" name="phone" id="phone" placeholder="Enter Phone">
+                        </div>
+                        <div class="input-field">
+                            <label class="label" for="subject">Subject:</label>
+                            <input required class="input" type="text" name="subject" id="subject" placeholder="Enter Subject">
+                        </div>
+                        <div class="input-field">
+                            <label class="label" for="message">Message:</label>
+                            <textarea class="input" name="message" id="message" placeholder="Enter message" cols="30" rows="10"></textarea>
+                        </div>
+    
+                        <input class="btn__form" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <footer>
+
+    </footer>
 
     
 </body>
