@@ -81,6 +81,7 @@ form.addEventListener('submit', (e) => {
 /* Efecto Fade */
 
 const title             = document.querySelector('.home__title');
+const homeBtn             = document.querySelector('.home__btn');
 const arrows            = document.querySelector('.arrows');
 const list              = document.querySelector('.list-benefits');
 const pictureBenefits   = document.querySelector('.picture-benefits');
@@ -115,6 +116,7 @@ const observer = new IntersectionObserver(cargarImagen, {
 });
 
 observer.observe(title);
+observer.observe(homeBtn);
 observer.observe(arrows);
 observer.observe(list);
 observer.observe(pictureBenefits);

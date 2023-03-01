@@ -204,6 +204,39 @@ li {
     text-transform: uppercase;
 }
 
+.btnContainer {
+    position: absolute;
+    top: 32%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+@media (min-width: 535px) {
+    .btnContainer {
+        top: 25%;
+    }
+}
+
+.home__btn {
+    padding: .8rem;
+    width: 12.5rem;
+    font-weight: 600;
+    letter-spacing: 1.15px;
+    text-align: center;
+    border-radius: 1.25rem;
+    text-transform: uppercase;
+    border: 2px solid white;
+    transition: .3s all;
+}
+
+.home__btn:hover {
+    background-color: white;
+    color: black;
+}
+
 .cover {
     position: absolute;
     width: 100%;
@@ -342,7 +375,7 @@ p,
 .btnContact {
     width: 100%;
     padding: .5rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: uppercase;
     background-color: transparent;
     border: 1px solid var(--ColorClaro);
