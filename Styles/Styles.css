@@ -222,7 +222,7 @@ li {
     position: absolute;
     display: flex;
     left: 47%;
-    bottom: 8%;
+    bottom: 15%;
     flex-direction: column;
     animation: arrow .8s ease-in-out infinite alternate-reverse forwards;
 }
@@ -245,12 +245,18 @@ li {
 
 .main {
     width: 100%;
-    padding: var(--MargenL) 0;
+    padding: 6.25rem 0 0 0;
+    gap: 6.25rem;
     display: flex;
-    gap: var(--MargenL);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 720px) {
+    .main {
+        gap: 12.5rem;
+    }
 }
 
 /* Beneficios */
@@ -285,6 +291,7 @@ li {
     gap: var(--MargenS);
 }
 
+p,
 .list__item {
     text-align: left;
     letter-spacing: .0719rem;
@@ -439,11 +446,20 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--MargenS);
 }
 
-.contact__img {
-    width: 100%;
-    height: auto;
+.contact .subtitle {
+    color: black;
+}
+
+.contact .bar {
+    background-color: black;
+}
+
+.contact__paragrath {
+    text-align: center;
+    color: black;
 }
 
 .form {
@@ -457,12 +473,7 @@ li {
     .form {
         width: 50%;
     }
-    .contact__picture {
-        width: 50%;
-    }
 }
-
-
 
 .fields {
     display: flex;  
@@ -478,27 +489,25 @@ li {
 }
 
 .label {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
     color: black;
 }
 
 .input {
     background-color: #fdfdfd;
-    padding: var(--MargenS);
+    border: 2px solid #fdfdfd;
+    padding: .9375rem;
     border-radius: .3125rem;
-    border: none;
     color: rgba(0, 0, 0, .7);
-    font-size: 1.2rem;
-    font-weight: 600;
-    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all .3s;
 }
 
-.input .success {
-    border: 1px solid #09c372;
-}
-.input .error {
-    border: 1px solid #ff3860;
+.input:focus {
+    border: 2px solid #0075FF;
+	outline: none;
 }
 
 .btn__form {
@@ -516,8 +525,21 @@ li {
     background-color: rgba(0, 0, 0, .85);
 }
 
-.contact__paragrath {
-    text-align: center;
+.form__input-error {
+    font-size: 12px;
+	margin-bottom: 0;
+    color: #ff3860;
+    display: none;
+}
+.form__input-error-active {
+    display: block;
+}
+
+.success {
+    border: 2px solid #09c372;
+}
+.error {
+    border: 2px solid #ff3860;
 }
 
 /* Footer */
@@ -529,6 +551,7 @@ li {
     justify-content: center;
     align-items: center;
     gap: var(--MargenM);
+    padding-top: var(--MargenL);
     padding-bottom: var(--MargenM);
 }
 

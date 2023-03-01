@@ -103,6 +103,25 @@
             </picture>
         </section>
 
+        <section id="about" class="about">
+
+            <div class="about__description">
+                <div>
+                    <span class="description__number">+200,000</span>
+                    <h4 class="description__subtitle">KW Generated</h4>
+                </div>
+                <div>
+                    <span class="description__number">+437</span>
+                    <h4 class="description__subtitle">Installations</h4>
+                </div>
+                <div>
+                    <span class="description__number">+250</span>
+                    <h4 class="description__subtitle">Customers</h4>
+                </div>
+            </div>
+        </section>
+
+
         <section id="products" class="products container">
             <h3 class="subtitle">Products</h3>
             <div class="bar"></div>
@@ -156,53 +175,35 @@
             </div>
         </section>
 
-        <section id="about" class="about">
-
-            <div class="about__description">
-                <div>
-                    <span class="description__number">+200,000</span>
-                    <h4 class="description__subtitle">KW Generated</h4>
-                </div>
-                <div>
-                    <span class="description__number">+437</span>
-                    <h4 class="description__subtitle">Installations</h4>
-                </div>
-                <div>
-                    <span class="description__number">+250</span>
-                    <h4 class="description__subtitle">Customers</h4>
-                </div>
-            </div>
-        </section>
 
         <section id="contact" class="contact">
             <h3 class="subtitle">Contact</h3>
+            <div class="bar"></div>
             <p class="container contact__paragrath">Are you interested in purchasing our solar products? Send us your information through the contact form and we will send you a quotation.</p>
 
             <div class="contact-container container">
-                <picture class='contact__picture'>
-                    <source srcset='./Assets/Img/mail-dynamic-clay.avif' type='image/avif'/>
-                    <source srcset='./Assets/Img/mail-dynamic-clay.webp' type='image/webp'/>
-                    <img class='contact__img' loading='lazy' width='200' height='300' src='./Assets/Img/mail-dynamic-clay.png' alt='Mail' />
-                </picture>
     
                 <form class="form" action="https://formsubmit.co/fernandogp2003pro@gmail.com" method="post">
                     <div class="fields">
-                        <div class="input-field">
+                        <div class="input-field group__name">
                             <label class="label" for="full-name">Full Name:</label>
                             <input required class="input" autocomplete="name" type="text" name="full-name" id="full-name" placeholder="Enter Full Name">
-                            <div class="error"></div>
+                            <p class="form__input-error">The name must be from 4 to 16 digits and can only contain letters and underscore.</p>
                         </div>  
-                        <div class="input-field">
+                        <div class="input-field group__email">
                             <label class="label" for="email">Email:</label>
                             <input required class="input" autocomplete="email" type="email" name="email" id="email" placeholder="Enter Email">
+                            <p class="form__input-error">Mail can only contain letters, numbers, periods, hyphens and underscores.</p>
                         </div>
-                        <div class="input-field">
+                        <div class="input-field group__phone">
                             <label class="label" for="phone">Phone:</label>
                             <input required class="input" type="number" name="phone" id="phone" placeholder="Enter Phone">
+                            <p class="form__input-error">The phone can only contain numbers and the maximum is 14 digits.</p>
                         </div>
-                        <div class="input-field">
+                        <div class="input-field group__subject">
                             <label class="label" for="subject">Subject:</label>
                             <input required class="input" type="text" name="subject" id="subject" placeholder="Enter Subject">
+                            <p class="form__input-error">The subject must be from 4 to 40 digits and can only contain letters and underscore.</p>
                         </div>
                         <div class="input-field">
                             <label class="label" for="message">Message:</label>
@@ -280,7 +281,7 @@
 
         </section>
 
-        <span class="container copyrigth">All copyrigth &copy; <span class="menu__title">Energy</span></span>
+        <span class="container copyrigth">All rights reserved&copy; <span class="menu__title">Energy</span></span>
 
     </footer>
 

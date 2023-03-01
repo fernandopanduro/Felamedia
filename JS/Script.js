@@ -21,49 +21,62 @@ function animateBars() {
 
 /* Form */
 
-/* const form      = document.querySelector('.form');
-const fullName  = document.querySelector('#full-name');
-const email     = document.querySelector('#email');
-const phone     = document.querySelector('#phone');
-const subject   = document.querySelector('#subject');
-const message   = document.querySelector('#message');
+const form      = document.querySelector('.form');
+const inputs    = document.querySelectorAll('.form input')
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
+const expressions = {
+	fullName: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	phone: /^\d{7,14}$/, // 7 a 14 numeros.
+    subject: /^[a-zA-Z0-9\_\-]{4,40}$/, // Letras, numeros, guion y guion_bajo
+};
 
-    validateInputs();
+const inputValidate = (expresion, name, campo) => {
+    
+    if (expresion.test(name.value)) {
+        document.querySelector(`.group__${campo} .form__input-error`).classList.remove('form__input-error-active');                
+        document.querySelector(`.group__${campo} .input`).classList.add('success');                
+        document.querySelector(`.group__${campo} .input`).classList.remove('error');                
+    } else {
+        document.querySelector(`.group__${campo} .form__input-error`).classList.add('form__input-error-active');
+        document.querySelector(`.group__${campo} .input`).classList.remove('success');                
+        document.querySelector(`.group__${campo} .input`).classList.add('error');                
+    }
+
+}
+
+const formValidate = (e) => {
+    switch (e.target.name) {
+        case 'full-name':
+            inputValidate(expressions.fullName, e.target, 'name')
+            break;
+
+        case 'email':
+            inputValidate(expressions.email, e.target, 'email')
+            break;
+
+        case 'phone':
+            inputValidate(expressions.phone, e.target, 'phone')
+            break;
+
+        case 'subject':
+            inputValidate(expressions.subject, e.target, 'subject')
+            break;
+    
+        default:
+            break;
+    }
+    
+}
+
+inputs.forEach((input) => {
+    input.addEventListener('blur', formValidate);
+    input.addEventListener('keyup', formValidate);
 })
 
-const setError = (element, menssage) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error')
+form.addEventListener('submit', (e) => {
+    console.log('Se envio el formulario');
+    
 
-    errorDisplay.innerText = menssage;
-    inputControl.classList.add('error')
-    inputControl.classList.remove('success')
-}
+});
 
-const setSuccess = (element, menssage) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error')
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success')
-    inputControl.classList.remove('error')
-}
-        
-const validateInputs = () => {
-    const nameValue = fullName.value.trim()
-    const emailValue = email.value.trim()
-    const phoneValue = phone.value.trim()
-    const subjectValue = subject.value.trim()
-    const messageValue = message.value.trim()
-
-    if (nameValue === '') {
-        setError(nameValue, 'Name is required')
-    } else {
-        setSuccess(nameValue)
-    }
-}
-
-console.log(email.value) */
