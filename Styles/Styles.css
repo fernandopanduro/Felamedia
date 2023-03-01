@@ -616,3 +616,30 @@ p,
     border-radius: .1875rem;
     background-color: var(--ColorPrincipal);
 }
+
+
+/* Fade */
+
+.fine {
+    opacity: 0;
+    transition: 1s;
+} 
+
+.fine-top  {
+    transform: translateY(10rem);
+}
+.fine-bottom  {
+    transform: translateY(10rem);
+}
+.fine-left  {
+    transform: translateX(-10rem);
+}
+
+.fine-rigth {
+    transform: translateX(10rem);
+}
+
+.show {
+    transform: none;
+    opacity: 1;
+}

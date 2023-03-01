@@ -76,7 +76,58 @@ inputs.forEach((input) => {
 
 form.addEventListener('submit', (e) => {
     console.log('Se envio el formulario');
-    
-
 });
 
+/* Efecto Fade */
+
+const title             = document.querySelector('.home__title');
+const arrows            = document.querySelector('.arrows');
+const list              = document.querySelector('.list-benefits');
+const pictureBenefits   = document.querySelector('.picture-benefits');
+const groupName         = document.querySelector('.group__name');
+const groupEmail        = document.querySelector('.group__email');
+const groupPhone        = document.querySelector('.group__phone');
+const groupSubject      = document.querySelector('.group__subject');
+const groupMenssage     = document.querySelector('.group__menssage');
+const btnForm           = document.querySelector('.btn__form');
+const generated         = document.querySelector('.generated'); 
+const installations     = document.querySelector('.installations');
+const customers         = document.querySelector('.customers');
+const card1             = document.querySelector('#card1');
+const card2             = document.querySelector('#card2');
+const card3             = document.querySelector('#card3');
+const footer            = document.querySelector('.footer');
+
+const cargarImagen = (entradas, observador) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('show'); // Muestra el elemento
+        } else {
+            entrada.target.classList.remove('show'); // /oculta el elemento
+        }
+    });  
+}
+
+const observer = new IntersectionObserver(cargarImagen, {
+    root: null,
+    rootMargin: '20px',
+    threshold: 0.2
+});
+
+observer.observe(title);
+observer.observe(arrows);
+observer.observe(list);
+observer.observe(pictureBenefits);
+observer.observe(card1);
+observer.observe(card2);
+observer.observe(card3);
+observer.observe(footer);
+observer.observe(generated);
+observer.observe(installations);
+observer.observe(customers);
+observer.observe(groupName);
+observer.observe(groupEmail);
+observer.observe(groupPhone);
+observer.observe(groupSubject);
+observer.observe(groupMenssage);
+observer.observe(btnForm);
