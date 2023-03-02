@@ -2,7 +2,7 @@
 
 /* Menu Hamburguesa */
 
-const bars = document.querySelector('.bars');
+const bars           = document.querySelector('.bars');
 const responsiveMenu = document.querySelector('.responsiveMenu')
 
 const lineBar1 = bars.querySelector('.bars__lineBar1');
@@ -10,6 +10,7 @@ const lineBar2 = bars.querySelector('.bars__lineBar2');
 const lineBar3 = bars.querySelector('.bars__lineBar3');
 
 bars.addEventListener('click', animateBars);
+bars.addEventListener('blur', animateBars);
 
 function animateBars() {
     lineBar1.classList.toggle('bars__lineBar1--active');
@@ -26,7 +27,7 @@ const inputs    = document.querySelectorAll('.form input')
 
 const expressions = {
 	fullName: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //Email
 	phone: /^\d{7,14}$/, // 7 a 14 numeros.
     subject: /^[a-zA-Z0-9\_\-]{4,40}$/, // Letras, numeros, guion y guion_bajo
 };
@@ -74,14 +75,10 @@ inputs.forEach((input) => {
     input.addEventListener('keyup', formValidate);
 })
 
-form.addEventListener('submit', (e) => {
-    console.log('Se envio el formulario');
-});
-
 /* Efecto Fade */
 
 const title             = document.querySelector('.home__title');
-const homeBtn             = document.querySelector('.home__btn');
+const homeBtn           = document.querySelector('.home__btn');
 const arrows            = document.querySelector('.arrows');
 const list              = document.querySelector('.list-benefits');
 const pictureBenefits   = document.querySelector('.picture-benefits');

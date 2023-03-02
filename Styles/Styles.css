@@ -358,11 +358,16 @@ p,
     text-align: center;
     background-color: rgba(255, 255, 255, .1);
     padding: var(--MargenS);
+    border-right: 2px solid rgba(255, 255, 255, .3);
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+    box-shadow: 2px 7px 12px rgba(255, 255, 255, .3);
+    border-radius: .1875rem;
+    backdrop-filter: blur(1.25rem);
 }
 
 @media (min-width: 700px) {
     .card {
-        height: 31.25rem;
+        height: 32.5rem;
     }
 }
 
@@ -380,12 +385,18 @@ p,
     background-color: transparent;
     border: 1px solid var(--ColorClaro);
     border-radius: 2px;
+    transition: .3s all;
+}
+
+.btnContact:hover {
+    background-color: white;
+    color: black;
 }
 
 @media (min-width: 700px) {
     .btnContact {
         position: absolute;
-        bottom: 0;
+        bottom: 2%;
         width: 90%;
     }
 }
