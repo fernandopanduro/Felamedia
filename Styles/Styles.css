@@ -664,22 +664,22 @@ p,
 
 /* Fade */
 
-.fine {
+.fade {
     opacity: 0;
     transition: 1s;
 } 
 
-.fine-top  {
+.fade-top  {
     transform: translateY(10rem);
 }
-.fine-bottom  {
+.fade-bottom  {
     transform: translateY(10rem);
 }
-.fine-left  {
+.fade-left  {
     transform: translateX(-10rem);
 }
 
-.fine-rigth {
+.fade-rigth {
     transform: translateX(10rem);
 }
 
