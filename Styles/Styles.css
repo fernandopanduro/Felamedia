@@ -430,6 +430,10 @@ p,
     text-align: center;
 }
 
+.description__contador {
+    color: var(--ColorPrincipal);
+}
+
 @media (max-width: 720px) {
     .about__description {
         gap: 3rem;

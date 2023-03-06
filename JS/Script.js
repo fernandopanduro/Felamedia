@@ -20,6 +20,35 @@ function animateBars() {
 }
 
 
+/* Contador - About */
+addEventListener('DOMContentLoaded', () => {
+    const contadores = document.querySelectorAll('.description__contador');
+    const velocidad  = 1100;
+
+    const animarContadores = () => {
+        for (const contador of contadores) {
+            const actualizarContador = () => {
+                let cantidadMax = +contador.dataset.cantidadTotal;
+                let valorActual = +contador.innerText;
+                let incremento  = cantidadMax / velocidad;
+
+                if (valorActual < cantidadMax) {
+                    contador.innerText = Math.ceil(valorActual + incremento);
+                    setTimeout(actualizarContador, 5)    
+                } else {
+                    contador.innerText = cantidadMax;
+                }
+            }
+            actualizarContador()
+        }
+    }
+    animarContadores()
+})
+
+
+
+
+
 /* Form */
 
 const form      = document.querySelector('.form');
