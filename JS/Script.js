@@ -10,7 +10,6 @@ const lineBar2 = bars.querySelector('.bars__lineBar2');
 const lineBar3 = bars.querySelector('.bars__lineBar3');
 
 bars.addEventListener('click', animateBars);
-bars.addEventListener('blur', animateBars);
 
 function animateBars() {
     lineBar1.classList.toggle('bars__lineBar1--active');
