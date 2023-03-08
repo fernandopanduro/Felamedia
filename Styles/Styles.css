@@ -276,7 +276,7 @@ li {
 
 /* Slider */
 .slider {
-    width: 100vw;
+    width: 100%;
     padding: var(--MargenS) 0;
     background-color: var(--ColorPrincipal);
     height: auto;
